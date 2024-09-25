@@ -1,4 +1,5 @@
 <?php
+include 'conectBd.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nome = $_POST['nome'];
@@ -13,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $inserecao = "INSERT INTO 
     pessoas(nome, cpf, sexo, data_nascimento, email, telefone, endereco, cidade, estado) 
-    VALUES(?,?,?,?,?,?,?,?,?,?,?)";
+    VALUES(?,?,?,?,?,?,?,?,?)";
     $in = $con->prepare($inserecao);
     $in->bindParam(1, $nome);
     $in->bindParam(2, $cpf);
@@ -25,10 +26,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $in->bindParam(8, $cidade);
     $in->bindParam(9, $estado);
 
-    $in->execute();
 
-    if ($in) {
-        header('Locatio: visualizar_dados.php');
+    if ( $in->execute()) {
+        header('Location: visualizar_dados.php');
     }else{
         echo"Erro ao cadastrar usuário";
     }
