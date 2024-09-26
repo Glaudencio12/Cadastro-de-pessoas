@@ -108,7 +108,7 @@
                 <a href='delete_user.php?id=" . $r['id'] . "'>  
                     <button class='delete-btn'>Excluir</button>  
                 </a>  
-                <a href='update_dados.php?id=" . $r['id'] . "'>  
+                <a href='form_update.php?id=" . $r['id'] . "'>  
                     <button class='edit-btn'>Editar</button>  
                 </a>  
             </td>";  
