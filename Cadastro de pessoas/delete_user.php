@@ -9,7 +9,7 @@ $del = $con->prepare($comando);
 $del->bindParam(1, $id);
 
 if ($del->execute()) {
-    header('Location: visualizar_dados.php');
+    header('Location: visualization_dados.php');
     exit;
 } else {
     echo "Erro ao excluir os dados: ";

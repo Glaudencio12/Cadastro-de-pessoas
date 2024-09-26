@@ -3,7 +3,7 @@ include 'conectBd.php';
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $nome_usuario = $_POST['nome_usuario'];
+    $id = $_GET['id'];
     $nome = $_POST['nome'];
     $cpf = $_POST['cpf'];
     $sexo = isset($_POST['sexo']) ? 'Masculino' : 'Feminino';
@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $estado = $_POST['estado'];
 
     $comando = "UPDATE pessoas 
-    SET nome = ?, cpf = ?, sexo = ?, data_nascimento = ?, email = ?, telefone = ?, endereco = ?, cidade = ?, estado = ? WHERE nome = ?";
+    SET nome = ?, cpf = ?, sexo = ?, data_nascimento = ?, email = ?, telefone = ?, endereco = ?, cidade = ?, estado = ? WHERE id = ?";
     
     $in = $con->prepare($comando);
     
@@ -28,12 +28,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $in->bindParam(7, $endereco);
     $in->bindParam(8, $cidade);
     $in->bindParam(9, $estado);
-    $in->bindParam(10, $nome_usuario);
+    $in->bindParam(10, $id);
     
 
 
     if ($in->execute()) {
-        header('Location: visualizar_dados.php');
+        header('Location: visualization_dados.php');
         exit;
     } else {
         echo "Erro ao atualizar dados: ";

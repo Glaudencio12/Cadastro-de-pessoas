@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
     if ( $in->execute()) {
-        header('Location: visualizar_dados.php');
+        header('Location: visualization_dados.php');
     }else{
         echo"Erro ao cadastrar usuário";
     }
