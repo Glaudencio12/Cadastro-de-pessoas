@@ -7,7 +7,8 @@ if (isset($_GET['id'])) {
 
     $comando = 'SELECT * FROM pessoas WHERE id = ?';
     $r = $con->prepare($comando);
-    $r->execute([$id]);
+    $r->bindParam(1, $id);
+    $r->execute();
     $user = $r->fetch(PDO::FETCH_ASSOC);
 
     
