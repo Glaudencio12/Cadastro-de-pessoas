@@ -1,5 +1,5 @@
 <?php
-include 'conectBd.php';
+include 'conect_bd.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nome = $_POST['nome'];
@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $in->bindParam(9, $estado);
         
         if ( $in->execute()) {
-            header('Location: visualization_dados.php');
+            header('Location: view_data.php');
             exit;
         }else{
             echo"Erro ao cadastrar usuário";

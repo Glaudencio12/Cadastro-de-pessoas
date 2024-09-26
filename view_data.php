@@ -87,7 +87,7 @@
             <th>AÇÕES</th>
         </tr>
         <?php
-        include 'conectBd.php';
+        include 'conect_bd.php';
         $comando = 'SELECT * from pessoas';
         $r = $con->query($comando, PDO::FETCH_ASSOC);
         $consulta = $r->fetchAll();

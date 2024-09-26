@@ -1,5 +1,5 @@
 <?php
-include 'conectBd.php';
+include 'conect_bd.php';
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
@@ -58,7 +58,7 @@ if (isset($_GET['id'])) {
 
 
         if ($in->execute()) {
-            header('Location: visualization_dados.php');
+            header('Location: view_data.php');
             exit;
         } else {
             echo "Erro ao atualizar dados: ";
