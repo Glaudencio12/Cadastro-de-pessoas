@@ -26,7 +26,7 @@
             background-color: rgba(177, 245, 18, 0.234);
         }
 
-        .enviar {
+        .enviar, .button-return {
             width: 100%;
             font-size: 30px;
             border: none;
@@ -34,6 +34,9 @@
             background-color: greenyellow;
             cursor: pointer;
             border-radius: 20px;
+        }
+        .button-return:hover{
+            background-color: #cde808;
         }
 
         .enviar:hover {
@@ -141,8 +144,10 @@
             <label for="cidade">CIDADE:</label>
             <input type="text" name="cidade" id="cidade" placeholder="Nome da cidade" required><br><br>
 
-            <button type="submit" class="enviar" onclick="limparCampos()">CADASTRAR</button>
+            <button type="submit" class="enviar">CADASTRAR</button><br>
         </form>
+        <a href="view_data.php"> <button class="button-return">VISUALIZAR TABELA DE DADOS</button></a>
+
     </fieldset>
 
     <script>

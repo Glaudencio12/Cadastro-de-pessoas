@@ -68,6 +68,10 @@
         .edit-btn:hover {
             background-color: #388E3C;
         }
+        .button-return{
+            font-size: 18px;
+            background-color: #4CAF50;
+        }
     </style>
 </head>
 
@@ -117,6 +121,7 @@
         }
         ?>
     </table><br>
+    <a href="form_cadastro.html"> <button class="button-return">Voltar à tela de cadastro</button></a>
 </body>
 
 </html>

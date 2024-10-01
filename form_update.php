@@ -29,7 +29,7 @@ include 'update_user.php';
             background-color: rgba(177, 245, 18, 0.234);
         }
 
-        .enviar {
+        .enviar, .button-return {
             width: 100%;
             font-size: 30px;
             border: none;
@@ -40,6 +40,10 @@ include 'update_user.php';
         }
 
         .enviar:hover {
+            background-color: #cde808;
+        }
+
+        .button-return:hover {
             background-color: #cde808;
         }
 
@@ -144,8 +148,10 @@ include 'update_user.php';
             <label for="cidade">CIDADE:</label>
             <input type="text" name="cidade" id="cidade" value="<?php echo htmlspecialchars($cidade); ?>"><br><br>
 
-            <button type="submit" class="enviar">ATUALIZAR</button>
+            <button type="submit" class="enviar">ATUALIZAR</button><br>
+            <a href="view_data.php"> <button class="button-return">VOLTAR À TABELA DE DADOS</button></a>
         </form>
+
     </fieldset>
 </body>
 
