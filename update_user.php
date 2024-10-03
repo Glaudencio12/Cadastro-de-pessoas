@@ -24,7 +24,6 @@ if (isset($_GET['id'])) {
         $estado = $user['estado'];
     } else {
         echo "Usuário não encontrado.";
-        exit;
     }
 
     

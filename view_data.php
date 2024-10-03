@@ -97,6 +97,7 @@
         $consulta = $r->fetchAll();
         $total = count($consulta);    
         echo "<h2>Total de usuários cadastrados: <span>$total</span></h2>";
+        
         foreach ($consulta as $r) {
             echo "<tr>";
             echo "<td>" . htmlspecialchars($r['nome']) . "</td>";

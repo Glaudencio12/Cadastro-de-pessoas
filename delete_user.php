@@ -5,10 +5,10 @@ if (isset($_GET['id'])) {
     $id = $_GET['id'];
 }
 $comando = "DELETE FROM pessoas WHERE id = ?";
-$del = $con->prepare($comando);
-$del->bindParam(1, $id);
+$delete = $con->prepare($comando);
+$delete->bindParam(1, $id);
 
-if ($del->execute()) {
+if ($delete->execute()) {
     header('Location: view_data.php');
     exit;
 } else {

@@ -13,17 +13,32 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $estado = $_POST['estado'];
 
     
-    $consultaEmail =  "SELECT id FROM pessoas WHERE email = ?";
-    $consult = $con->prepare($consultaEmail);
-    $consult->bindParam(1, $email);
-    $consult->execute();
+    $consultaEmail = "SELECT id FROM pessoas WHERE email = ?";
+    $consultaCPF = "SELECT id FROM pessoas WHERE cpf = ?";
+
+    $consultEmail = $con->prepare($consultaEmail);
+    $consultCPF = $con->prepare($consultaCPF);
+
+    $consultEmail->bindParam(1, $email);
+    $consultCPF->bindParam(1, $cpf);
+
+    $consultEmail->execute();
+    $consultCPF->execute();
     
-    if ($consult->rowCount() > 0) {
-        echo "E-mail já cadastrado. Por favor, use um e-mail diferente.";
-    }
+    $emailCadastrado = $consultEmail->rowCount() > 0;
+    $cpfCadastrado = $consultCPF->rowCount() > 0;
+    
+    if ($emailCadastrado && $cpfCadastrado) {
+        echo "E-mail e CPF inválidos. Por favor, tente novamente com dados diferentes.";
+    } 
+    elseif ($emailCadastrado) {
+        echo "E-mail inválido. Por favor, use um e-mail diferente.";
+    } 
+    elseif ($cpfCadastrado) {
+        echo "CPF inválido. Por favor, use um CPF diferente";
+    }     
     else{
-        $inserecao = "INSERT INTO 
-        pessoas(nome, cpf, sexo, data_nascimento, email, telefone, endereco, cidade, estado) 
+        $inserecao = "INSERT INTO pessoas(nome, cpf, sexo, data_nascimento, email, telefone, endereco, cidade, estado) 
         VALUES(?,?,?,?,?,?,?,?,?)";
         $in = $con->prepare($inserecao);
         $in->bindParam(1, $nome);
@@ -40,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             header('Location: view_data.php');
             exit;
         }else{
-            echo"Erro ao cadastrar usuário";
+            echo"Erro ao cadastrar o usuário";
         }
     }
 }
