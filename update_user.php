@@ -13,15 +13,15 @@ if (isset($_GET['id'])) {
 
     
     if ($user) {
-        $nome = $user['nome'];
-        $cpf = $user['cpf'];
-        $sexo = $user['sexo'];
-        $data_nascimento = $user['data_nascimento'];
-        $email = $user['email'];
-        $telefone = $user['telefone'];
-        $endereco = $user['endereco'];
-        $cidade = $user['cidade'];
-        $estado = $user['estado'];
+        $nomeUser = $user['nome'];
+        $cpfUser = $user['cpf'];
+        $sexoUser = $user['sexo'];
+        $data_nascimentoUser = $user['data_nascimento'];
+        $emailUser = $user['email'];
+        $telefoneUser = $user['telefone'];
+        $enderecoUser = $user['endereco'];
+        $cidadeUser = $user['cidade'];
+        $estadoUser = $user['estado'];
     } else {
         echo "Usuário não encontrado.";
     }

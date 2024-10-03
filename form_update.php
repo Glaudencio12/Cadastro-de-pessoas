@@ -87,35 +87,35 @@ include 'update_user.php';
         <form action="update_user.php?id=<?php echo $id; ?>" method="post" id="form">
             
             <label for="nome">NOME:</label>
-            <input type="text" name="nome" id="nome" value="<?php echo htmlspecialchars($nome); ?>"><br>
+            <input type="text" name="nome" id="nome" value="<?php echo htmlspecialchars($nomeUser); ?>"><br>
 
             <label for="CPF">CPF:</label>
-            <input type="number" name="cpf" id="CPF" value="<?php echo htmlspecialchars($cpf); ?>"><br>
+            <input type="number" name="cpf" id="CPF" value="<?php echo htmlspecialchars($cpfUser); ?>"><br>
 
             <label for="sexo">SEXO:</label>
             <select name="sexo" id="sexo">
-                <option value="<?php echo htmlspecialchars($sexo); ?>"><?php echo htmlspecialchars($sexo); ?></option>
+                <option value="<?php echo htmlspecialchars($sexoUser); ?>"><?php echo htmlspecialchars($sexoUser); ?></option>
                 <option value="Masculino">Masculino</option>
                 <option value="Feminino">Feminino</option>
                 <option value="Outro">Outro</option>
             </select><br>
 
             <label for="data">DATA DE NASCIMENTO:</label>
-            <input type="date" name="data_nascimento" id="data" value="<?php echo htmlspecialchars($data_nascimento); ?>"><br>
+            <input type="date" name="data_nascimento" id="data" value="<?php echo htmlspecialchars($data_nascimentoUser); ?>"><br>
 
             <label for="e-mail">E-MAIL:</label>
-            <input type="email" name="email" id="e-mail" value="<?php echo htmlspecialchars($email); ?>"><br>
+            <input type="email" name="email" id="e-mail" value="<?php echo htmlspecialchars($emailUser); ?>"><br>
 
             <label for="telefone">TELEFONE:</label>
-            <input type="tel" name="telefone" id="telefone" value="<?php echo htmlspecialchars($telefone); ?>"><br>
+            <input type="tel" name="telefone" id="telefone" value="<?php echo htmlspecialchars($telefoneUser); ?>"><br>
 
             <label for="endereco">ENDEREÇO:</label>
-            <input type="text" name="endereco" id="endereco" value="<?php echo htmlspecialchars($endereco); ?>"><br>
+            <input type="text" name="endereco" id="endereco" value="<?php echo htmlspecialchars($enderecoUser); ?>"><br>
 
 
             <label for="estado">ESTADO:</label>
             <select id="estado" name="estado" >
-                <option value="<?php echo htmlspecialchars($estado); ?>"><?php echo htmlspecialchars($estado); ?></option>
+                <option value="<?php echo htmlspecialchars($estadoUser); ?>"><?php echo htmlspecialchars($estadoUser); ?></option>
                 <option value="AC">Acre</option>
                 <option value="AL">Alagoas</option>
                 <option value="AP">Amapá</option>
@@ -146,7 +146,7 @@ include 'update_user.php';
             </select><br>
 
             <label for="cidade">CIDADE:</label>
-            <input type="text" name="cidade" id="cidade" value="<?php echo htmlspecialchars($cidade); ?>"><br><br>
+            <input type="text" name="cidade" id="cidade" value="<?php echo htmlspecialchars($cidadeUser); ?>"><br><br>
 
             <button type="submit" class="enviar">ATUALIZAR</button><br>
             <a href="view_data.php"> <button class="button-return">VOLTAR À TABELA DE DADOS</button></a>
