@@ -2,6 +2,13 @@
 
 Este projeto foi desenvolvido como parte da avaliação da disciplina de Desenvolvimento Web II. 
 O objetivo é implementar uma aplicação que permita o cadastro de pessoas, utilizando tecnologias web e práticas de programação.
+# Equipe responsável pelo desenvolvimento:
+Glaudencio da Costa Meneses;
+Francisco das Chagas de Oliveira Sousa;
+Fabrício Henrique da Costa Silva;
+João Gabriel Lima Aguiar;
+Matheus de Lima Carvalho;
+João Gabriel Silva Sousa;
 
 ## Tecnologias Utilizadas
 
