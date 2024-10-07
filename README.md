@@ -23,21 +23,24 @@ O projeto pode ser organizado da seguinte forma:
 ```
 /projeto-cadastro-pessoas
 │
-├── index.php             # Página principal
-├── cadastrar.php         # Página para cadastrar pessoas
-├── listar.php            # Página para listar todos os cadastros
-├── conexao.php           # Arquivo para gerenciamento da conexão com o banco de dados
-└── style.css             # Estilos da aplicação
+├── conect_bd.php         # Faz a conexão com o banco de dados
+├── form_cadastro.html    # Página para cadastrar pessoas
+├── insert_data.php       # Arquivo que trata das informaçãoes da pessoa e insere no BD
+├── view_data.php         # Página para listar todos os cadastros
+├── form_update.php       # Formulário utilizado para a atualização dos dados
+└── update_user.php       # Arquivo que faz a conexão e tratamento das informações editadas
+├── delete_user.php       # Arquivo resposável por excluir os dados da pessoa do BD
+└── pessoas.sql           # Tabela na qual os dados são inserido, editado e excluidos
 ```
 
 ## Como Executar
 
 1. Clone o repositório em sua máquina local.
-2. Configure o banco de dados MySQL de acordo com o arquivo `conexao.php`.
-3. Acesse o arquivo `index.php` através de um servidor local (como XAMPP ou WAMP).
+2. Configure o banco de dados MySQL de acordo com o arquivo `conect_bd.php`.
+3. Acesse o arquivo `form_cadastro.php` através de um servidor local (como XAMPP).
 
 ## Conclusão
 
-Este projeto reflete os conhecimentos adquiridos ao longo da disciplina e demonstra a aplicação prática dos conceitos de desenvolvimento web e manipulação de banco de dados em PHP. 
+Este projeto reflete os conhecimentos adquiridos ao longo do segundo bimestre da disciplina e demonstra a aplicação prática dos conceitos de desenvolvimento web e manipulação de banco de dados em PHP. 
 Sinta-se à vontade para explorar e contribuir!
 
