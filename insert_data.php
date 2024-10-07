@@ -29,13 +29,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $cpfCadastrado = $consultCPF->rowCount() > 0;
     
     if ($emailCadastrado && $cpfCadastrado) {
-        echo "E-mail e CPF inválidos. Por favor, tente novamente com dados diferentes.";
+        echo "E-mail e CPF inválidos. Por favor, corrija seus dados.";
     } 
     elseif ($emailCadastrado) {
-        echo "E-mail inválido. Por favor, use um e-mail diferente.";
+        echo "E-mail inválido. Por favor, corrija seu e-mail.";
     } 
     elseif ($cpfCadastrado) {
-        echo "CPF inválido. Por favor, use um CPF diferente";
+        echo "CPF inválido. Por favor, corrija seu cpf";
     }     
     else{
         $inserecao = "INSERT INTO pessoas(nome, cpf, sexo, data_nascimento, email, telefone, endereco, cidade, estado) 
